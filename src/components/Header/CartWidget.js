@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CartWidget = () => {
   return (
-    <button className="btn d-flex">
+    <Link to="/cart" className="btn d-flex">
       <span className="align-self-center">Carrito</span> <span className="material-symbols-outlined align-self-center">shopping_cart</span>
-    </button>
+    </Link>
   );
 };
 

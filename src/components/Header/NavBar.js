@@ -1,17 +1,20 @@
+import React from "react";
+import { NavLink } from "react-router-dom";
+
 const NavBar = () => {
   return (
     <ul className="d-flex navigation">
       <li>
-        <a href="./">Categoria 1</a>
+        <NavLink to="/category/todos">Todos</NavLink>
       </li>
       <li>
-        <a href="./">Categoria 2</a>
+        <NavLink to="/category/tipograficos">Tipográficos</NavLink>
       </li>
       <li>
-        <a href="./">Categoria 3</a>
+        <NavLink to="/category/figuras">Figuras</NavLink>
       </li>
       <li>
-        <a href="./">Categoria 4</a>
+        <NavLink to="/category/peliculas">Películas</NavLink>
       </li>
     </ul>
   );
