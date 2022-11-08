@@ -1,9 +1,16 @@
 import React from "react";
+import { useState, useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ item }) => {
-  const onAdd = (qtyAdd) => {
-    console.log(qtyAdd);
+  const [quantity, setQuantity] = useState(0);
+
+  const { addToCart } = useContext(CartContext);
+
+  const onAdd = (quantityAdd) => {
+    setQuantity(quantityAdd);
+    addToCart(item, quantityAdd);
   };
 
   return (
@@ -23,6 +30,7 @@ const ItemDetail = ({ item }) => {
           )}
         </article>
         <ItemCount stock={item.stock} onAdd={onAdd} />
+        <div className="col-12 mt-2">{quantity === 0 ? <p></p> : <p>Se agregaron {quantity} productos</p>}</div>
       </div>
     </div>
   );

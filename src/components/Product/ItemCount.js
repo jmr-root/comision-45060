@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ItemCount = ({ stock, initial, onAdd }) => {
+const ItemCount = ({ stock, onAdd }) => {
   const [quantity, setQuantity] = useState(0);
 
   const dec = () => {
@@ -14,6 +14,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
       setQuantity(quantity + 1);
     }
   };
+
   return (
     <div className="col-12">
       <div className="flex-row">
@@ -23,6 +24,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
             -
           </button>
           <div className="col-4 qtyBox flex-fill text-center align-middle">{quantity}</div>
+
           <button className="btn btn-outline flex-fill btn" disabled={quantity === stock} onClick={inc}>
             +
           </button>

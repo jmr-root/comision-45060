@@ -6,14 +6,17 @@ import "./css/App.css";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 
+import CartProvider from "./context/CartContext";
 import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
   return (
     <div className="container">
       <BrowserRouter>
-        <Header />
-        <Main />
+        <CartProvider>
+          <Header />
+          <Main />
+        </CartProvider>
       </BrowserRouter>
     </div>
   );
