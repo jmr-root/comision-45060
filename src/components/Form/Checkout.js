@@ -151,14 +151,14 @@ const Form = () => {
                 </label>
                 <input type="text" name="cp" className="form-control" onChange={handleCp} value={cp} />
               </div>
-              <div className="col-8 mt-3">
+              <div className="col-9 mt-3">
                 <Link to="/cart" className="btn btn-secondary me-2">
                   VOLVER
                 </Link>
                 <button className="btn btn-primary">{sending === true ? "ENVIANDO..." : "FINALIZAR COMPRA"}</button>
                 <span className="ms-2 font-semibold fs-13">{validateForm}</span>
               </div>
-              <div className="col-4 mt-3 text-end">
+              <div className="col-3 mt-3 text-end">
                 <p className="accent-red fs-11 mt-2">* Estos campos son obligatorios</p>
               </div>
             </div>
