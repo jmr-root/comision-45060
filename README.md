@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+![](http://c2001927.ferozo.com/cuadros/images/logo_blanco.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Proyecto
 
-## Available Scripts
+**ENMARCO es una plataforma E-Commerce para la venta de cuadros, esta realizado en React Js y la información se almaceno en Firebase.**
 
-In the project directory, you can run:
+## Funcionalidades
 
-### `npm start`
+- **Sección HOME** con listado de productos nuevos.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Sección CATEGORIAS** con listado de todos los productos o filtrados por categoria desde MENU.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Sección DETALLE PRODUCTO**
+  -- Previsualización de producto cargando con SKELETON.
+  -- Detalle de producto con información general, precio normal y oferta en caso de estar disponible, calculo de cuotas s/interés, componente de cantidad y agregado.
 
-### `npm test`
+- **Sección CARRITO** donde se visualizan los productos agregados con su imagen, precio, cantidad, subtotal y total general.
+  -- Posibilidad de quitar productos.
+  -- Vaciar el carrito.
+  -- Ir al checkout.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Sección CHECKOUT** donde se procede al envío de la información del usuario y se muestra el resumen del pedido.
+  -- Posee validación de campos completos.
+  -- Posee validación de coincidencia de email.
+  -- Modifica el precio si el ENVÍO es gratis superando los 6.000.
+  -- Envío y obtención de número de orden.
 
-### `npm run build`
+- **Sección USUARIO** donde se busca ordenes realizadas.
+  -- Validación de campo vacio.
+  -- Validación de coincidencia de numero ingresado con el número en la base de datos.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Base de Datos
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Se utilizo **FIREBASE** para almacenar la información de las siguientes colecciones:
+-- Productos
+-- Categorías dinámicas
+-- Colección de ordenes creadas por el usuario
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Librerias
 
-### `npm run eject`
+- **React Js:** Es una biblioteca de JavaScript declarativa, eficiente y flexible para construir interfaces de usuario. Permite componer IUs complejas de pequeñas y aisladas piezas de código llamadas “componentes.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Node. js** Entorno de código abierto multiplataforma que ejecuta el código JavaScript fuera del navegador orientado a a eventos asíncronos.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Node Package Manager** - NPM Es el gestor de paquetes, módulos o librerías que nos proporciona Node.js.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **React-Router-Dom** es una colección de componentes de navegación con la cual vamos obtener un enrutamiento dinámico gracias a los componentes, en otras palabras tenemos unas rutas que renderizan un componente.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+`$ npm install react-router-dom`
 
-## Learn More
+- **Firebase** es una plataforma en la nube para el desarrollo de aplicaciones web y móvil. Está disponible para distintas plataformas (iOS, Android y web), con lo que es más rápido trabajar en el desarrollo.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`$ npm install firebase`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Comenzar
 
-### Code Splitting
+Ejecutar el proyecto desde un editor de código(Vsc, Sublime, etc):
+Ejecutar el proyecto en la consola del editor de código:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+`$ npm start`
 
-### Analyzing the Bundle Size
+Este comando corre la aplicación en modo desarrollador.
+Abri tu navegador en [http://localhost:3000](http://localhost:3000) para ver el proyecto.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+El sitio se recargará cuando hagas cambios....
 
-### Making a Progressive Web App
+### Clonar
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Clonar repositorio de forma local
+Clonar el repositorio: **git clone** [https://github.com/jmr-root/comision-45060](https://github.com/jmr-root/comision-45060)
 
-### Advanced Configuration
+### Instalar las dependencias:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+`$ npm install `
 
-### Deployment
+**Aprender más sobre React - Create React App**
+Puedes aprender más en la Documentación de Create React App.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Para aprender React puedes chequear la Documentación de React.
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Support identification, interpretation, fliter of the HTML tags;
+- Support TeX (LaTeX expressions, Based on KaTeX), Flowchart and Sequence Diagram of Markdown extended syntax;
+- Support AMD/CMD (Require.js & Sea.js) Module Loader, and Custom/define editor plugins.
